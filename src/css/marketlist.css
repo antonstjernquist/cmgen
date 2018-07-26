@@ -1,0 +1,113 @@
+.marketListWrapper {
+  margin: 0px 15px;
+  background-color: #444;
+  width: 800px;
+  padding: 15px 25px;
+  border-radius: 4px;
+  min-height: 600px;
+}
+
+/* Title and Buy or sell */
+.titleAndBuyOrSell {
+  display: flex;
+  justify-content: space-between;
+}
+
+.buyOrSellDiv {
+  font-size: 1.2em;
+  display: flex;
+  align-items: center;
+  color: #888;
+  cursor: pointer;
+}
+.buyOrSellDiv > i {
+  color: #f2f2f2;
+  padding: 0px 5px;
+}
+span.buyOrSellHighlight {
+  color: #ddd;
+}
+.filterIconWrapper > i:not(.filterHighlight) {
+  color: #535353;
+}
+
+/* Prices */
+.marketListWrapper .pricesWrapper > div > span:first-child {
+  width: 30px;
+}
+
+.marketListWrapper .pricesWrapper > div > span {
+  width: 76px;
+}
+
+/* Market list header */
+.marketListHeader {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+.marketListHeader > span:first-child {
+  flex: 2;
+}
+.marketListHeader > span {
+  flex: 1 1 0px;
+}
+
+/* Sort */
+.sortHolderDiv {
+  display: flex;
+  padding-right: 10px;
+  margin: 0px;
+  margin-right: 28px;
+  background-color: #2a2a2a;
+  border-radius: 4px;
+}
+
+/* Market list header item */
+.marketListHeaderItem {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  padding: 2px 0px;
+  cursor: pointer;
+  margin-left: 20px;
+}
+.marketListHeaderItem span {
+  color: #aaa;
+}
+span.filterHighlight {
+  color: #fefefe;
+}
+/* Quality div */
+.marketListHeaderItemQualityDiv {
+  position: relative;
+  flex: 2 2 140px;
+  display: flex;
+  justify-content: space-between;
+  background-color: #2a2a2a;
+  align-items: baseline;
+  padding: 10px 15px;
+  border-radius: 4px;
+}
+.marketListHeaderItemQualityDiv > .qualityDivTitleSpan {
+  position: absolute;
+  font-size: 0.7em;
+  font-weight: 400;
+  top: 0;
+  left: 0;
+  margin: 4px;
+}
+.marketListHeaderItemQualityDiv > span {
+  cursor: pointer;
+}
+
+.marketListQualityDisplaySpan {
+  font-size: 0.9em;
+  padding: 5px 5px;
+  margin-left: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #333;
+  border-radius: 4px;
+}

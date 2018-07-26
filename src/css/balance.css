@@ -1,0 +1,69 @@
+.balanceWrapperDiv {
+  width: 400px;
+  border-radius: 4px;
+  padding: 10px 20px;
+  margin-bottom: 20px;
+  position: relative;
+  background-color: #444;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.balanceWrapperDiv > h1 {
+  flex: 1;
+}
+.balanceDisplayDiv {
+    height: 100%;
+    margin-left: 10px;
+    flex: 2;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+/* Balance */
+.balanceDisplayDiv > span {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 200;
+  margin-left: 20px;
+}
+
+/* Balance edit button */
+.balanceDisplayDiv > button {
+  background-color: inherit;
+  color: #fefefe;
+  border: none;
+  cursor: pointer;
+  max-width: 42px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.balanceWrapperDiv button:hover {
+  color: #106f78;
+}
+
+/* Input fields */
+.inputHolderDiv {
+  display: flex;
+  flex: 2;
+}
+.inputHolderDiv > div {
+  padding: 5px 10px;
+  background-color: #555;
+  border-radius: 4px;
+  margin: 2px 2px;
+}
+
+.inputHolderDiv > div > input {
+  width: 100%;
+  background-color: inherit;
+  border: none;
+  color: #fefefe;
+}
+
+/* New balance */
+.newBalanceDiv {
+  background-color: #333;
+  border-radius: 4px;
+  padding: 15px 20px;
+}

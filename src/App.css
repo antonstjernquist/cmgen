@@ -1,28 +1,395 @@
-.App {
-  text-align: center;
+h1 {
+  margin: 0px;
+  padding: 0px;
+  font-weight: 200;
+  font-family: 'Montserrat', sans-serif;
+}
+header {
+  padding: 15px 30px;
+  margin: 0px;
+  color: #fefefe;
+  background-color: #444444;
+  display: flex;
+  justify-content: space-between;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+/* Flex options for header */
+header h1 {
+  flex: 4;
+  max-width: 80%;
+}
+header > .searchBar {
+  flex: 2;
+}
+header .headerLinks {
+  min-width: 200px;
+}
+header > * {
+  border: 1px solid #444;
 }
 
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
+/* Search bar */
+.searchBar {
+  background-color: #aaaaaa;
+  padding: 0px 15px;
+  display: flex;
+  align-items: center;
+  margin: 0px 15px;
+  border-radius: 4px;
+  min-width: 200px;
 }
 
-.App-title {
+.searchBar > input[type="text"]{
+  background-color: inherit;
+  width: 100%;
+  border: none;
+  padding: 5px 10px;
+  color: #fefefe;
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Header links */
+.headerLinks {
+  padding: 5px 25px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  min-width: 260px;
+}
+.headerLinks > span {
+  padding: 5px 9px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.headerLinks > span:hover {
+  background-color: #555;
+}
+
+/* Add item CSS */
+
+/* New Item and Overview wrapper */
+.panelWrapper {
+  display: flex;
+  justify-content: center;
+  margin: 20px 40px;
+}
+
+/* New Item and Confirm actions wrapper */
+.newItemAndConfirmActionsWrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.newItemDiv {
+  position: relative;
+  background-color: #444;
+  width: 400px;
+  padding: 10px 20px;
+  border-radius: 4px;
+  margin: 0px 15px;
+}
+
+/* Input and search button wrapper div */
+.inputAndButtonHolder {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 10px 0px;
+}
+button.ctaButton {
+  border: none;
+  padding:  10px 20px;
+  border-radius: 4px;
+  background-color: #106f78;
+  color: #d6d6d6;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.2em;
+  cursor: pointer;
+  margin-left: 10px;
+}
+button.ctaButton:hover {
+  background-color: #0c626a;
+}
+
+/* Input Div */
+.nameInputDiv {
+  border-radius: 4px;
+  background-color: #606060;
+  display: flex;
+  padding: 9px 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 260px;
+}
+.newItemDiv input {
+  font-size: 1.2em;
+  background-color: inherit;
+  border: none;
+  color: #fefefe;
+  font-family: 'Roboto', sans-serif;
+  margin-right: 4px;
+  width: 100%;
+}
+.nameInputDiv i {
+  cursor: pointer;
+}
+
+/* Wrapper */
+.idAndCategoryWrapper {
+  display: flex;
+  justify-content: space-between;
+}
+.idAndCategoryWrapper .titleAndInputDiv:first-child {
+  width: 80px;
+}
+
+/* Title and input */
+.titleAndInputDiv {
+  font-size: 1.2em;
+  margin: 3px 0px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+.titleAndInputDiv input {
+  box-sizing: border-box;
+  margin-top: 3px;
+  border-radius: 4px;
+  font-size: 1em;
+  width: 100%;
+  background-color: #606060;
+  padding: 8px 12px;
+}
+
+/* Image url, hover preview */
+.imageUrlIcon + img {
+  display: none;
+  position: absolute;
+  margin-left: 430px;
+  background-color: rgba(51, 51, 51, 0.73);
+  padding: 6px 12px;
+  border-radius: 4px;
+  max-height: 120px;
+  min-height: 70px;
+}
+
+.imageUrlIcon:hover + img, .imageUrlIcon + img:hover {
+  display: block;
+}
+
+
+
+/* Category and Icon */
+.categoryInputAndIcon {
+  background-color: #606060;
+  border-radius: 4px;
+  padding: -2px 20px;
+  margin: 0px;
+  display: flex;
+  align-items: center;
+  padding-right: 7px;
+  justify-content: space-between;
+}
+.categoryInputAndIcon > input {
+  width: calc(100% - 50px);
+  margin: 0px;
+}
+.categoryInputAndIcon i {
+  cursor: pointer;
+}
+
+
+/* extended categories */
+.extendedCategories {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 15px 0px;
+}
+.extendedCategories > span {
+  margin: 5px 0px;
+  align-self: flex-start;
+}
+.subCategoryDiv {
+  display: flex;
+  align-items: center;
+  width: calc(100% - 30px);
+  padding: 10px 15px;
+  border-radius: 4px;
+  background-color: #666;
+  margin: 5px 0px;
+}
+.subCategoryDiv i {
+  cursor: pointer;
+}
+button.addCategoryButton {
+  background-color: #555;
   font-size: 1.5em;
+  margin-top: 5px;
+  margin-bottom: 2px;
+}
+/* Prices title */
+.pricesTitle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 25px 25px 10px;
+}
+.pricesTitle > span:nth-child(2){
+  font-size: 1.3em;
+}
+.pricesTitle > span {
+  font-size: 1.1em;
 }
 
-.App-intro {
-  font-size: large;
+/* Prices list */
+.priceList {
+  margin: 0px 0px;
+  padding: 0px;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+}
+.priceList > li {
+  margin: 0px;
+  padding: 0px;
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 3px 0px;
+}
+.priceList > li > input {
+  width: 70px;
+  text-align: center;
+  border-radius: 4px;
+  padding: 5px 10px;
+  margin: 0px;
+  background-color: #606060;
+}
+/* Create button */
+.extendedAdd > button.ctaButton {
+  width: 100%;
+  margin: 10px 0px 5px;
 }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+
+
+/* Messages */
+.messageHolder {
+  position: absolute;
+  margin: 25px;
+  right: 0;
+  z-index: 20;
+}
+
+.messageHolder div {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  font-size: 1.2em;
+  width: 240px;
+  padding: 20px 25px 30px 25px;
+  margin: 8px;
+  border-radius: 4px;
+  background: linear-gradient(180deg, rgba(44,42,47,1) 0%, rgba(44,42,47,1) 12%, rgba(40,39,43,1) 100%);
+}
+.messageHolder div span {
+  font-family: 'Roboto', sans-serif;
+  font-size: 0.8em;
+}
+.messageHolder div i {
+  display: none;
+  color: #7a7a7a;
+  position: absolute;
+  top: 3px;
+  right: 3px;
+}
+
+/* Hover */
+.messageHolder div:hover {
+  cursor: pointer;
+  background: linear-gradient(180deg, rgba(44,42,47,1) 0%, rgba(44,42,47,1) 80%, rgba(40,39,43,1) 100%);
+  box-shadow: 4px 4px 5px #555;
+}
+
+/* Different styles based on status */
+.messageHolder div.messagesuccess {
+  border-top: 3px solid #47ad82;
+}
+.messageHolder div.messageerror {
+  border-top: 3px solid #aa4747;
+}
+.messageHolder div.messagewarning {
+  border-top: 3px solid #c1bc79;
+}
+.messageHolder div.messageinfo {
+  border-top: 3px solid #85c5d6;
+}
+
+/* Hover close */
+i.hoverClose {
+  position: absolute;
+  display: none;
+  top: 4px;
+  right: 5px;
+}
+
+.messageTime {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  color: #555;
+  margin: 5px 8px;
+  font-size: 0.6em !important;
+}
+
+.messageHolder div:hover i, i.hoverClose:hover {
+  display: flex;
+}
+
+/* Toggle expand button */
+.expandButton {
+  border: none;
+  background-color: inherit;
+  position: absolute;
+  color: #fefefe;
+  right: 5px;
+  top: 0px;
+  cursor: pointer;
+  padding: 0px;
+  margin: 0px;
+}
+.expandButton:hover {
+  color: #106f78;
+}
+.expandButton > i {
+  font-size: 2.4em;
+}
+
+/* Material icons size */
+.material-icons.md-18 { font-size: 18px; }
+.material-icons.md-24 { font-size: 24px; }
+.material-icons.md-36 { font-size: 36px; }
+.material-icons.md-48 { font-size: 48px; }
+
+
+
+/* Unselectable */
+i, .unsel {
+  -webkit-user-select: none; /* Safari */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE10+/Edge */
+  user-select: none; /* Standard */
+}
+
+/* Hiding spinner */
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance:textfield;
 }

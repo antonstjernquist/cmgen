@@ -1,0 +1,119 @@
+/* Wrapper */
+.overviewWrapper {
+  margin: 0px 15px;
+  background-color: #444;
+  width: 800px;
+  padding: 15px 25px;
+  border-radius: 4px;
+  min-height: 600px;
+}
+
+.overviewButtonWrapper {
+  justify-content: space-between;
+  display: flex;
+}
+
+
+/* Refresh Button */
+.overviewButtonWrapper > button.ctaButton {
+  margin-right: -10px;
+}
+
+/* Info Message */
+.overviewInfoMessage {
+  margin-top: 5px;
+  background-color: #39393c;
+  padding: 10px 15px;
+  border-radius: 4px;
+  max-width: 70%;
+  display: block;
+}
+
+/* Filter options */
+
+.databseFilterOptions {
+  display: flex;
+  justify-content: space-between;
+  background-color: #39393c;
+  border-radius: 4px;
+  margin: 5px 0px;
+  padding: 15px;
+}
+
+/* Filterbar & sortBar */
+.filterAndSortWrapper {
+  flex: 1;
+  display: flex;
+}
+
+.filterBar, .sortBar {
+  display: flex;
+  align-items: center;
+  background-color: #333;
+  border-radius: 4px;
+  padding: 5px 10px;
+  margin: 0px 10px;
+}
+
+.filterBar > input {
+  background-color: inherit;
+  border: none;
+  color: #fefefe;
+  padding: 5px 15px;
+}
+
+/* Sort bar with drop down */
+.sortBar {
+  position: relative;
+  min-width: 175px;
+}
+.sortBar > ul {
+  cursor: pointer;
+  position: absolute;
+  width: 140px;
+  background-color: inherit;
+  border: none;
+  list-style: none;
+  padding: 0px;
+  margin: 0px;
+  border-radius: 5px;
+  margin-left: 25px;
+  top: 4px;
+  z-index: 2;
+}
+
+/* Specific list items */
+.sortBar > ul > li:not(:first-child):hover {
+  background-color: #555;
+}
+.sortBar > ul > li {
+  padding: 7px 15px;
+}
+.sortBar > ul.hide li:not(:first-child){
+  display: none;
+}
+.sortBar > ul:not(.hide) > li:first-child {
+  border-radius: 4px;
+  background-color: #363638;
+  border-bottom: 2px solid #333;
+}
+.sortBar > ul > li:last-child:hover {
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+
+.displayNone {
+  display: none !important;
+}
+
+/* Filter icons */
+.filterIconWrapper {
+  display: flex;
+}
+.filterIconWrapper > i:first-child {
+  margin-top: -1px;
+}
+.filterIcon {
+  cursor: pointer;
+  font-size: 2.5em;
+}

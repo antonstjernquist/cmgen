@@ -1,0 +1,146 @@
+/* List types */
+
+
+/* Normal list, small list */
+
+.listDiv {
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  height: 40px;
+  background-color: #333;
+  border-radius: 4px;
+  margin: 5px 0px;
+}
+
+.listDiv img {
+  margin-right: 12px;
+  width: 30px;
+  height: 30px;
+}
+
+.listDiv .nameAndCategory {
+  display: flex;
+  flex-direction: column;
+  align-self: flex-start;
+  white-space: nowrap;
+  width: 100px;
+}
+
+.listDiv .nameAndCategory > span:first-child {
+  text-overflow: ellipsis;
+  width: 100px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.listDiv .nameAndCategory > span:nth-child(3){
+  font-size: 0.8em;
+  color: #ddd;
+  margin-top: -2px;
+}
+
+/* Hover text */
+.listDiv .nameAndCategory > span.hoverText {
+  display: none;
+  position: absolute;
+  background-color: #414a4e;
+  border-radius: 3px;
+  padding: 4px 8px;
+}
+.listDiv .nameAndCategory > span.hovername:hover + span.hoverText, .listDiv .nameAndCategory > span.hoverText:hover {
+  display: block;
+}
+
+.pricesWrapper > .buyPricesDiv, .pricesWrapper > .sellPricesDiv {
+  padding-bottom: 2px;
+  margin-bottom: 2px;
+}
+
+.pricesWrapper > div > span:first-child {
+  display: inline-block;
+  width: 20px;
+  font-size: 0.8em;
+  vertical-align: 1px;
+  color: #bbb;
+  margin: 0px 10px 0px 10px;
+}
+
+.pricesWrapper > div > span {
+  width: 60px;
+  margin-top: 4px;
+  text-align: center;
+  display: inline-block;
+}
+
+
+/* Big list, larger list */
+
+.bglistDiv {
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  height: 80px;
+  background-color: #333;
+  border-radius: 4px;
+  margin: 5px 0px;
+}
+
+.bglistDiv img {
+  margin-right: 15px;
+  width: 45px;
+  max-height: 100%;
+}
+
+.bglistDiv .nameAndCategory {
+  display: flex;
+  flex-direction: column;
+  align-self: flex-start;
+  margin-top: 10px;
+}
+.bglistDiv .nameAndCategory > span:nth-child(2) {
+  font-size: 0.8em;
+  color: #ddd;
+  margin-top: -2px;
+}
+
+
+
+
+/* Manage buttons */
+.manageButtonsWrapper {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex: 1;
+}
+
+.manageButtonsWrapper > i:hover {
+  cursor: pointer;
+  color: #106f78;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* Dividers */
+
+/* Horizontal */
+.hdivider {
+  border-right: 1px solid #37383b;
+  height: 60%;
+  margin: 5px 10px;
+}
+
+/* Vertical */
+.vdivider {
+  border-bottom: 1px solid #666;
+  width: calc(100% - 65px);
+  margin-left: 50px;
+}

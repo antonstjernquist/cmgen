@@ -1,0 +1,76 @@
+.cmGenOutsideWrapper {
+  position: fixed;
+  z-index: 4;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(55, 55, 55, 0.98);
+}
+.cmGenDiv {
+  background-color: red;
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -10%);
+  background-color: #eee;
+  color: #232323;
+  padding: 20px 25px 20px;
+  border-radius: 4px;
+  max-width: 50%;
+  min-width: 30%;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+}
+
+.generatedCodeSpan {
+  background-color: #ddd;
+  margin-top: 8px;
+  padding: 10px;
+  display: block;
+  border-radius: 4px;
+  font-family: monospace;
+}
+
+/* Header */
+.cmGenHeaderDiv {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Items */
+.generatedCommandItemDivWrapper h3 {
+  font-weight: 400;
+  color: #232323;
+  font-size: 1.4em;
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  margin-top: 10px;
+}
+
+.cmGenDiv > button {
+  border: none;
+  background-color: #cd5a5a;
+  cursor: pointer;
+  padding: 6px 14px;
+  color: #fefefe;
+  border-radius: 4px;
+  margin: 15px 0px 0px;
+  align-self: flex-end;
+}
+.cmGenDiv > button:hover {
+  background-color: #b34242;
+}
+.copyButton {
+  border: none;
+  color: #fefefe;
+  background-color: #888;
+  margin-left: 15px;
+  padding: 6px 12px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+.cmGenHeaderDiv > button:hover {
+  background-color: #444;
+}

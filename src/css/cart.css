@@ -1,0 +1,201 @@
+/* Important wrappers regarding the marketlist, cart and balance page. */
+.cartAndMarketListWrapper {
+  display: flex;
+  justify-content: center;
+  margin: 20px 40px;
+}
+
+/* Basically New Balance */
+.cartWrapperDiv h1:not(:first-child) {
+  margin-top: 15px;
+}
+.balanceAndCartWrapper {
+  display: flex;
+  flex-direction: column;
+  margin: 0 15px;
+  height: 0%;
+}
+.cartWrapperDiv {
+  width: 400px;
+  border-radius: 4px;
+  padding: 10px 20px;
+  position: relative;
+  background-color: #444;
+}
+.cartWrapperDiv > span {
+  display: inline-block;
+  background-color: #39393c;
+  padding: 6px 10px;
+  border-radius: 4px;
+  margin: 4px 0px;
+}
+
+/* Generate command button */
+.generateCommandAndUndoButtonDiv {
+  display: flex;
+  justify-content: space-between;
+}
+.generateCommandAndUndoButtonDiv > button:first-child {
+  margin: 0px;
+  flex: 2;
+}
+.cartListWrapper {
+
+}
+
+.totalCostPriceDiv > div > h2 {
+  margin: 0;
+  padding: 0;
+  font-weight: 200;
+  border-bottom: 1px solid #444;
+  padding-bottom: 4px;
+}
+/* Cartitem */
+.cartItemDiv {
+  background-color: #333;
+  margin: 2px 0px;
+  padding: 5px 10px;
+  border-radius: 4px;
+}
+
+/* typeAndQuantityDiv */
+.typeAndQuantityDiv {
+  display: flex;
+  width: 60px;
+  flex-direction: column;
+  justify-content: center;
+}
+.typeAndQuantityDiv > div {
+  display: flex;
+  align-items: center;
+}
+.typeAndQuantityDiv > div > span{
+  font-size: 0.9em;
+  color: #dedede;
+  text-align: right;
+}
+
+.profitDiv {
+  display: flex;
+  flex-direction: column;
+}
+
+
+.profitDiv > span:first-child {
+  color: #ddd;
+  font-size: 0.9em;
+}
+.profitDiv > span:nth-child(2) {
+  width: 180px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.profitDiv > span.profitSpan {
+  color: #82b466;
+}
+.profitDiv > span.costSpan {
+  color: #994646;
+}
+
+
+.cartListWrapper .listDiv {
+  position: relative;
+}
+/* Remove from cart button */
+.removeFromCartButton {
+  border: none;
+  background: none;
+  right: 0;
+  color: #838383;
+  position: absolute;
+  top: 0;
+  cursor: pointer;
+  padding: 0;
+  margin: 1px;
+}
+.hoverRemoveButton {
+  position: absolute;
+  display: none;
+  right: -110px;
+  top: 0;
+  background-color: #232323;
+  color: #fefefe;
+  border-radius: 4px;
+  padding: 4px 8px;
+}
+.removeFromCartButton:hover + span.hoverRemoveButton {
+  display: block;
+}
+
+/* Total cost */
+.totalCostDivWrapper {
+  margin: 10px 0px 5px;
+}
+  /* Price holder */
+.totalCostPriceDiv > div {
+  padding: 10px 15px;
+  margin: 5px 0px 10px;
+  border-radius: 4px;
+  background-color: #333;
+}
+
+.totalCostPriceDiv > div > .costSpanHeader {
+  display: block;
+  margin-bottom: -2px;
+  font-weight: 200;
+  font-family: 'Montserrat';
+  font-size: 1.2em;
+}
+
+/* New balance div */
+.newBalanceDiv {
+  position: relative;
+}
+.newBalanceDiv h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.3em;
+    font-weight: 200;
+    margin: 6px 0px -4px 0px;
+    padding: 0;
+}
+/* New balance and the difference */
+.newBalanceAndDifferenceDiv {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Difference colors */
+.negativDifference {
+  color: #ba4343;
+}
+.positivDifference {
+  color: #82b466;
+}
+
+/* Result displayd div */
+.balanceResultDiv {
+  position: absolute;
+  right: 0;
+  top: 0;
+  margin: 10px;
+  background-color: #232323;
+  border-radius: 4px;
+  padding: 3px 5px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.balanceResultDiv.plus {
+  background-color: #4dba4d;
+  color: #b9dbb9;
+}
+.balanceResultDiv.minus {
+  color: #eb8383;
+  background-color: #ac453f;
+}
+.balanceResultDiv.even {
+  padding: 6px 12px;
+  color: #666;
+  font-size: 1em;
+  background-color: #e7e69d;
+}
